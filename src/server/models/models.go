@@ -1,7 +1,6 @@
 package models
 
 import (
-	"strings"
 	"time"
 )
 
@@ -17,37 +16,29 @@ const (
 )
 
 type Set struct {
-	id uint
-	reps uint
-	weight uint
-	units string
+	Id uint
+	Reps uint
+	Weight uint
+	Units string
 }
 type Sets []Set
 
 type Exercise struct {
-	name string
-	exerciseType ExerciseType 
-	description string
+	Name string
+	ExerciseType ExerciseType 
+	Description string
 }
 type Exercises []Exercise
-var exercises = Exercises{
-	{name: "deadlift", exerciseType: Back, description: "keep your back straight!!" },
-}
-
 type Workout struct {
-	name string
-	exercises map[Exercise]Sets
-	start time.Time
-	end time.Time
+	Name string
+	Exercises map[string]Sets
+	Start time.Time
+	End time.Time
 }
 type Workouts []Workout
 
-func (this Exercise) compare(other Exercise) int {
-	return strings.Compare(this.name, other.name)
-}
-
-func (e Exercises) AddExercise(ex Exercise) {
-	e = append(e, ex)
+func (e Exercises) AddExercise(ex Exercise) Exercises {
+	return append(e, ex)
 }
 
 func (e Exercises) UpdateExercise(name string, ex Exercise) {
