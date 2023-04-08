@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Deadlift",
+        "ExerciseType": "back",
+        "Description": "Lower back exercise"
+    },
+    {
+        "Name": "Pull Down",
+        "ExerciseType": "back",
+        "Description": "Lats pull down exercise"
+    },
+    {
+        "Name": "Bicep Curls",
+        "ExerciseType": "biceps",
+        "Description": "Dumbell curls"
+    },
+    {
+        "Name": "Overhead Press",
+        "ExerciseType": "shoulders",
+        "Description": "Overhead dumbell push"
+    },
+    {
+        "Name": "Squat",
+        "ExerciseType": "legs",
+        "Description": "Barbell squat"
+    }
+]

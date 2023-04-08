@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	handlers.InitDemoData()
+	handlers.InitDemoWorkouts()
+	handlers.InitDemoExercises()
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/v1/exercises", handlers.ExerciseHandler)
 	mux.HandleFunc("/api/v1/workouts", handlers.WorkoutHandler)
